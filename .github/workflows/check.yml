@@ -1,0 +1,27 @@
+name: Documentation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - run: git show --format= --check HEAD
+      - name: Check local links
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          for page in pathlib.Path('.').rglob('*.md'):
+              for link in re.findall(r'\]\(([^\s)]+)\)', page.read_text()):
+                  path = link.split('#', 1)[0]
+                  if path and not re.match(r'[a-z][a-z0-9+.-]*:', path, re.I):
+                      assert (page.parent / path).exists(), f'{page}: missing {path}'
+          print('Documentation links passed')
+          PY
