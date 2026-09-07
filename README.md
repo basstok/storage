@@ -20,6 +20,11 @@ Keep exports private, because they can include private community records.
 
 ## Current availability
 
+Managers can check bucket settings from Administration on iPhone, Android or
+the web. The check leaves your current storage unchanged.
+
+<img src="assets/iphone-storage.png" width="300" alt="Check bucket settings from Basstok on iPhone">
+
 Production communities currently use Basstok-managed storage. Customer-managed
 S3 integration is implemented and undergoing provider verification; it is not
 yet a supported production option. No provider is listed here as fully verified.
