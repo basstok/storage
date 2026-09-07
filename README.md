@@ -20,5 +20,5 @@ This repository documents the customer-facing storage contract. It is separate
 from [Basstok Agents](https://github.com/basstok/agents), which extend Basstok
 through the public REST API.
 
-[Explore Basstok](https://basstok.com/) · [Data and control](https://basstok.com/storage)
+[Explore Basstok](https://basstok.com/) · [Data and control](https://basstok.com/#section-11)
 · [Contact](mailto:mail@basstok.com)
