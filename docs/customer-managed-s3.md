@@ -17,7 +17,6 @@ to discuss a target before provisioning it for Basstok.
 - S3 object reads, byte ranges, writes, conditional creation and deletion.
 - Bucket access checks and object listing.
 - Multipart upload, part listing, completion, cancellation and signed part uploads.
-- A verified lifecycle rule that removes abandoned multipart uploads.
 - For browser uploads, CORS permission for the community's exact origin and required upload requests.
 
 “S3-compatible” alone does not establish compatibility. The full upload,
@@ -29,6 +28,13 @@ provider before production use. A successful object upload is not enough.
 The customer controls the storage account, billing, availability, public-access
 policy and provider-level permissions. Keep the bucket private. Give human
 inspectors read/export access separately from Basstok's service credential.
+
+**Upload cleanup:** Basstok attempts to cancel failed uploads. Interrupted
+uploads can leave incomplete parts that incur storage charges. Configure your
+provider to remove incomplete multipart uploads, for example after seven days,
+or clean them up with its own tools. Do not expire completed community data.
+Basstok does not read or change your lifecycle rules, and lifecycle API support
+is not required.
 
 Basstok uses the enrolled target for supported community changes. It does not
 create or replace a customer's bucket implicitly. Credential rotation must be
