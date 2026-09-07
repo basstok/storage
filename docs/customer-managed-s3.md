@@ -4,11 +4,16 @@ Customer-managed storage places a community's durable data in a dedicated
 private bucket under the customer's storage account. The data format and
 community permissions stay the same.
 
-Connecting a bucket currently uses assisted setup. Contact
-[Basstok](mailto:mail@basstok.com?subject=Customer-managed%20storage) to verify
-the chosen service and arrange initial setup. Managers can check its settings
-from Administration on iPhone, Android or the web without changing current
-storage.
+Open **Administration → Data and storage** on iPhone, Android or the web.
+Enter your bucket settings and choose **Check bucket**. Basstok tests access
+using temporary data, then removes it. Your current storage is unchanged.
+
+When you are ready, choose **Move community**. This separate confirmation moves
+an existing Basstok-managed community to your bucket. Community activity pauses
+while its data moves. You can close the screen and return to check progress;
+an interrupted move resumes after access is restored. Unfinished uploads may
+need to be started again. Completed files and community permissions remain
+intact.
 
 ## What a target needs
 
@@ -40,10 +45,11 @@ is not required.
 Basstok uses the enrolled target for supported community changes. It does not
 create or replace a customer's bucket implicitly. Credential rotation must be
 verified before the old credential is revoked; revoking the active credential
-can interrupt service. Moving existing community data to another target is not
-an automatic setup option.
+can interrupt service. Replacing an already connected customer bucket is not
+part of the in-app move. Contact Basstok before changing that target.
 
 Do not post credentials, private bucket addresses or data exports in GitHub
-issues or email. Contact Basstok first to arrange the appropriate setup.
+issues or email. Enter connection credentials only in the authorized storage
+screen, or arrange a secure setup with Basstok.
 
 [Privacy and recovery](privacy-and-recovery.md) · [Back to storage](../README.md)

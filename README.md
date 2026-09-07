@@ -20,15 +20,14 @@ Keep exports private, because they can include private community records.
 
 ## Use your own bucket
 
-Managers can check bucket settings from Administration on iPhone, Android or
-the web. The check leaves your current storage unchanged.
+Check your bucket from Administration on iPhone, Android or the web. Nothing
+moves until a Manager chooses **Move community**.
 
 <img src="assets/iphone-storage.png" width="300" alt="Check bucket settings from Basstok on iPhone">
 
-Connecting a customer-managed S3-compatible bucket currently uses assisted
-setup. [Contact Basstok](mailto:mail@basstok.com?subject=Customer-managed%20storage)
-to check the chosen service and arrange initial setup. The in-app check does
-not connect the bucket or move an existing community.
+Basstok moves your existing community to the connected bucket. Activity pauses
+during the move; you can leave the screen and return to check progress. If a
+connection is interrupted, restore access and resume without starting over.
 
 [Customer-managed S3](docs/customer-managed-s3.md) covers bucket requirements
 and responsibilities. [Privacy and recovery](docs/privacy-and-recovery.md)
