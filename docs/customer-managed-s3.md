@@ -4,10 +4,11 @@ Customer-managed storage places a community's durable data in a dedicated
 private bucket under the customer's storage account. The data format and
 community permissions stay the same.
 
-**Status:** the integration is implemented, but production provider verification
-is not complete. Basstok-managed storage remains the supported production
-option. Contact [Basstok](mailto:mail@basstok.com?subject=Customer-managed%20storage)
-to discuss a target before provisioning it for Basstok.
+Connecting a bucket currently uses assisted setup. Contact
+[Basstok](mailto:mail@basstok.com?subject=Customer-managed%20storage) to verify
+the chosen service and arrange initial setup. Managers can check its settings
+from Administration on iPhone, Android or the web without changing current
+storage.
 
 ## What a target needs
 

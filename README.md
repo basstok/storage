@@ -18,16 +18,17 @@ zstd -dc downloaded-record.json.zst | jq .
 Use Basstok to make changes; editing stored objects directly is not supported.
 Keep exports private, because they can include private community records.
 
-## Current availability
+## Use your own bucket
 
 Managers can check bucket settings from Administration on iPhone, Android or
 the web. The check leaves your current storage unchanged.
 
 <img src="assets/iphone-storage.png" width="300" alt="Check bucket settings from Basstok on iPhone">
 
-Production communities currently use Basstok-managed storage. Customer-managed
-S3 integration is implemented and undergoing provider verification; it is not
-yet a supported production option. No provider is listed here as fully verified.
+Connecting a customer-managed S3-compatible bucket currently uses assisted
+setup. [Contact Basstok](mailto:mail@basstok.com?subject=Customer-managed%20storage)
+to check the chosen service and arrange initial setup. The in-app check does
+not connect the bucket or move an existing community.
 
 [Customer-managed S3](docs/customer-managed-s3.md) covers bucket requirements
 and responsibilities. [Privacy and recovery](docs/privacy-and-recovery.md)
