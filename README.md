@@ -33,6 +33,6 @@ connection is interrupted, restore access and resume without starting over.
 and responsibilities. [Privacy and recovery](docs/privacy-and-recovery.md)
 explains what ownership and exported copies do—and do not—provide.
 
-[Explore Basstok](https://basstok.com/) · [Data and control](https://basstok.com/#section-11)
+[Explore Basstok](https://basstok.com/)
 · [REST API](https://github.com/basstok/api) · [Agents](https://github.com/basstok/agents)
 · [Contact](mailto:mail@basstok.com)
