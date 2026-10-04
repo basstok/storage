@@ -1,14 +1,17 @@
 # Your data
 
-A Basstok community has a dedicated Object Storage data boundary. Its durable
+A Basstok Account or community has its own Object Storage data boundary. Its durable
 records include Content, Comments, Members, Chats, Messages, Labels and Asset
 metadata. Files and recordings keep their ordinary media formats.
 
-## Readable records
+## Structured records
 
-Structured records are readable JSON, compressed with standard Zstandard in
-files ending in `.json.zst`. You do not need Basstok software to inspect a
-downloaded record:
+Basstok-managed storage uses self-describing BEVE v2 records at `.beve.zst`
+keys. Customer-owned buckets use readable JSON at `.json.zst` keys. Both use
+standard Zstandard compression and represent the same Account data and
+permissions. Files retain their ordinary formats.
+
+For a downloaded JSON record from a customer-owned bucket:
 
 ```sh
 zstd -dc downloaded-record.json.zst | jq .

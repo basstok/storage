@@ -1,15 +1,16 @@
 # Customer-managed S3
 
-Customer-managed storage places a community's durable data in a dedicated
-private bucket under the customer's storage account. The data format and
-community permissions stay the same.
+Customer-managed storage places the selected Account's durable data in a
+dedicated private bucket under the customer's storage account. Structured
+records become readable JSON; their identities, meaning and permissions stay
+the same. Another Account remains a separate data boundary.
 
 Open **Administration → Data and storage** on iPhone, Android or the web.
 Enter your bucket settings and choose **Check bucket**. Basstok tests access
 using temporary data, then removes it. Your current storage is unchanged.
 
-When you are ready, choose **Move community**. This separate confirmation moves
-an existing Basstok-managed community to your bucket. Community activity pauses
+When you are ready, explicitly confirm the move. This separate confirmation moves
+the existing Account data to your bucket. Activity pauses
 while its data moves. You can close the screen and return to check progress;
 an interrupted move resumes after access is restored. Unfinished uploads may
 need to be started again. Completed files and community permissions remain

@@ -5,9 +5,9 @@ your data.
 
 ## Two different kinds of access
 
-Inside Basstok, Members and delegated Agents remain subject to the community's
+Inside Basstok, Members and delegated Apps remain subject to the Organization's
 permissions and the resources they may access. Choosing a different storage
-provider does not give an Agent or Member extra permissions.
+provider does not give an App or Member extra permissions.
 
 Provider-level storage access is separate. Someone allowed to export a bucket
 may obtain private records as well as public Content. Grant it deliberately,
