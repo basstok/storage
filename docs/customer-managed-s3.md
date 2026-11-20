@@ -2,8 +2,8 @@
 
 Customer-managed storage places the selected Account's durable data in a
 dedicated private bucket under the customer's storage account. Structured
-records become readable JSON; their identities, meaning and permissions stay
-the same. Another Account remains a separate data boundary.
+records are readable JSON and retain their identities and permissions. Each
+Account has its own data boundary.
 
 Open **Administration → Data and storage** where available. The current
 Account Manager can choose **Check bucket** to test credentials, object access

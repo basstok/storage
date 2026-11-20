@@ -4,12 +4,10 @@ A Basstok Account has its own storage boundary. It contains Account data
 such as Stories, Replies, Members, Chats, Messages, private Email, Labels and
 Asset metadata. Files and recordings keep their ordinary media formats.
 
-## Structured records
+## Records in your bucket
 
-Basstok-managed storage uses self-describing BEVE v2 records at `.beve.zst`
-keys. Customer-owned buckets use readable JSON at `.json.zst` keys. Both use
-standard Zstandard compression and represent the same Account data and
-permissions. Files retain their ordinary formats.
+Customer-owned buckets provide readable JSON records at `.json.zst` keys.
+The records use standard Zstandard compression.
 
 For a downloaded JSON record from a customer-owned bucket:
 

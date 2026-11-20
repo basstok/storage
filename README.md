@@ -2,10 +2,9 @@
 
 Your Account's data should stay understandable and within reach.
 
-Each Account has its own data boundary. Media keeps its ordinary file formats. Structured records use self-describing BEVE v2 in
-Basstok-managed storage and readable JSON in customer-owned buckets, with
-standard Zstandard compression. Authorized owners can arrange read/export access
-and keep their own copies.
+Each Account has its own data boundary. In your own bucket, structured records
+are readable JSON with standard Zstandard compression. Media keeps its ordinary
+file formats. Authorized owners can arrange read and export access.
 
 ## Start with your data
 
