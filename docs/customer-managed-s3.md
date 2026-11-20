@@ -5,21 +5,21 @@ dedicated private bucket under the customer's storage account. Structured
 records become readable JSON; their identities, meaning and permissions stay
 the same. Another Account remains a separate data boundary.
 
-Open **Administration → Data and storage** on iPhone, Android or the web.
-Enter your bucket settings and choose **Check bucket**. Basstok tests access
-using temporary data, then removes it. Your current storage is unchanged.
+Open **Administration → Data and storage** where available. The current
+Account Manager can choose **Check bucket** to test credentials, object access
+and multipart operations with temporary data. Basstok removes the probes and
+leaves the current storage selection in use.
 
 When you are ready, explicitly confirm the move. This separate confirmation moves
-the existing Account data to your bucket. Activity pauses
-while its data moves. You can close the screen and return to check progress;
-an interrupted move resumes after access is restored. Unfinished uploads may
-need to be started again. Completed files and community permissions remain
-intact.
+the existing Account data to your bucket. Ordinary activity pauses during
+the move. Check progress after reopening the app or after a service restart.
+If access fails, restore it and resume with the same enrolled connection.
+Unfinished uploads may need to be started again.
 
 ## What a target needs
 
 - A dedicated, empty, private bucket.
-- A TLS-verified HTTPS endpoint and signing region.
+- A public HTTPS endpoint with a trusted certificate and a signing region.
 - A separate service credential restricted to the bucket operations Basstok needs.
 - S3 object reads, byte ranges, writes, conditional creation and deletion.
 - Bucket access checks and object listing.
@@ -28,7 +28,9 @@ intact.
 
 “S3-compatible” alone does not establish compatibility. The full upload,
 recording, permission and recovery behavior must be verified for the selected
-provider before production use. A successful object upload is not enough.
+provider before production use. Verify browser CORS separately where browser
+uploads are needed. The bucket check leaves provider lifecycle and CORS rules
+unchanged.
 
 ## Responsibilities
 
@@ -39,7 +41,8 @@ inspectors read/export access separately from Basstok's service credential.
 **Upload cleanup:** Basstok attempts to cancel failed uploads. Interrupted
 uploads can leave incomplete parts that incur storage charges. Configure your
 provider to remove incomplete multipart uploads, for example after seven days,
-or clean them up with its own tools. Do not expire completed community data.
+or clean them up with its own tools. Keep completed Account data outside the
+incomplete-part cleanup rule.
 Basstok does not read or change your lifecycle rules, and lifecycle API support
 is not required.
 

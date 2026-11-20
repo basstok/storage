@@ -5,12 +5,12 @@ your data.
 
 ## Two different kinds of access
 
-Inside Basstok, Members and delegated Apps remain subject to the Organization's
+Inside Basstok, Members and delegated Apps remain subject to their Account's
 permissions and the resources they may access. Choosing a different storage
 provider does not give an App or Member extra permissions.
 
 Provider-level storage access is separate. Someone allowed to export a bucket
-may obtain private records as well as public Content. Grant it deliberately,
+may obtain private records as well as public Stories. Grant it deliberately,
 limit who receives exported copies, and keep public bucket access disabled.
 
 ## Changes and integrity
@@ -29,12 +29,12 @@ for how information is handled.
 
 Keep appropriate backups and protect them from accidental deletion. A readable
 copy helps preserve custody, but it does not by itself establish that the copy
-contains the latest permissions, revocations or community changes.
+contains the latest permissions, revocations or Account changes.
 
 Recovery must establish trustworthy current data before access resumes. Do not
 restore an arbitrary older export into an active bucket or assume it will be
 accepted. Contact [Basstok](mailto:mail@basstok.com) before a recovery or storage
-change. Deleting the data bucket can destroy the community's durable data;
+change. Deleting the data bucket can destroy the Account's durable data;
 customer-managed storage does not include a promise of automatic recovery.
 
 [Your data](your-data.md) · [Back to storage](../README.md)
